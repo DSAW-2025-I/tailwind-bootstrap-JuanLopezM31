@@ -3,30 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Tailwind | Stats preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
+<body class="bg-[#0a0c1cff] h-screen flex items-center justify-center flex-col px-4">
 
-  Get insights that help your business grow.
+  <main class="bg-[#1c1938ff] w-full md:w-4/5 h-auto md:h-3/5 rounded-lg flex flex-col-reverse md:flex-row overflow-hidden">
+    
+    <section class="w-full md:w-1/2 h-full flex flex-col justify-center items-center md:items-start px-6 md:pl-15 md:pt-8 md:pr-11 text-center md:text-left">
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
+      <h1 class="text-white text-3xl md:text-4xl font-bold">Get <span class="text-purple-500">insights</span> that help your business grow.</h1>
 
-  10k+ companies
-  314 templates
-  12m+ queries
+      <p class="pt-7 md:pr-16 text-pretty text-white/60">Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+        experience, and overall efficiency.
+      </p>
+      
+      <ul class="pt-14 flex flex-wrap md:flex-nowrap gap-6 md:gap-18 justify-center md:justify-start">
+        <li class="text-white/60 text-xs">
+          <h3 class="text-white font-bold text-2xl pb-1">10k+</h3>
+          <p>COMPANIES</p>
+        </li>
+        <li class="text-white/60 text-xs">
+          <h3 class="text-white font-bold text-2xl pb-1">314</h3>
+          <p>TEMPLATES</p>
+        </li>
+        <li class="text-white/60 text-xs">
+          <h3 class="text-white font-bold text-2xl pb-1">12M+</h3>
+          <p>QUERIES</p>
+        </li>
+      </ul>
+    </section>
+    
+    <section class="w-full md:w-1/2 relative">
+      <picture class="w-full h-full">
+        <source type="image/jpg" media="(min-width: 768px)" srcset="./images/image-header-desktop.jpg">
+        <img class="w-full h-64 md:h-full object-cover rounded-t-md md:rounded-r-md md:rounded-t-none" src="./images/image-header-desktop.jpg" alt="Imagen adaptable">
+      </picture>
+      <div class="absolute inset-0 bg-purple-900 opacity-60 rounded-t-md md:rounded-r-md md:rounded-t-none"></div>
+    </section>
+
+  </main>
 
   <div class="attribution">
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Juan Felipe López</a>.
   </div>
 </body>
 </html>
+
